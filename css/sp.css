@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+
+/** CSS 適用767pxまで **/
+@media screen and (max-width: 767px){
+/* =======================================
+
+	CommonElements
+
+======================================= */
+body {
+	font-size: 100%;
+	line-height: 140%;
+	font-family: Arial,Helvetica,sans-serif;
+	color: #000;
+	text-align: center;
+	background: #fff;
+}
+
+a:link { text-decoration:none; color: #000;}
+a:visited { text-decoration:none; color: #000;}
+a:active { text-decoration:none; color: #000;}
+a:hover { text-decoration:none; color: #000;}
+
+.mainlogo{
+	position: absolute;
+	width: 100%;
+	margin: 75px auto;
+	z-index: 1;
+}
+
+.mainlogo img{
+	max-width: 150px;
+	}
+	
+#container {
+	width: 100%;
+	text-align: center;
+}
+
+#loopslider {
+	margin: 0 auto;
+	width: 100%;
+	height: 300px;
+	text-align: left;
+	position: relative;
+	overflow: hidden;
+}
+
+#loopslider ul {
+	width: 100%;
+	height: 300px;
+	float: left;
+	display: inline;
+	overflow: hidden;
+}
+	
+#loopslider img {
+	max-height: 300px;
+}
+
+#loopslider ul li {
+	width: 864px;
+	height: 300px;
+	float: left;
+	display: inline;
+	overflow: hidden;
+}
+
+
+/* =======================================
+	ClearFixElements
+======================================= */
+#loopslider ul:after {
+	content: ".";
+	height: 0;
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+
+#loopslider ul {
+	display: inline-block;
+	overflow: hidden;
+}
