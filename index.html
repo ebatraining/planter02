@@ -1,337 +1,80 @@
 <!doctype html>
-<html>
+<html lang="ja">
+
 <head>
-<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>COUP D' ETAT PLANTER</title>
 
-<meta name="keywords" content="観葉植物,鉢,インテリア">
-<meta name="description" content="COUP D' ETAT PLANTER　観葉植物の鉢を高級感あふれるおしゃれな鉢へ">
-<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<link rel="stylesheet" type="text/css" href="style.css">
-<link rel="stylesheet" type="text/css" href="js/flexslider.css">
+<!--レスポンシブに必要なタグ-->
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="js/scroll_top.js"></script>
-<link rel="stylesheet" href="js/jquery.bxslider.css">
+<meta http-equiv="content-style-type" content="text/css" />
+<meta http-equiv="content-script-type" content="text/javascript" />
 
-<script><!--サムネイル-->
-$(window).load(function() {
-  $('.flexslider').flexslider({
-    animation: "slide",
-    controlNav: "thumbnails"
-  });
-});
-</script>
+<!--　CSSの相対パス -->
+<link rel="stylesheet" type="text/css" href="css/screen.css" media="all" />
 
-<script type="text/javascript"><!--スクロールフェードイン-->
+<!--　jqueryの絶対パス -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<!--　javascriptの記述はここから -->
+<script type="text/javascript">
 $(function(){
-    $(window).scroll(function (){
-        $('.fadein').each(function(){
-            var elemPos = $(this).offset().top;
-            var scroll = $(window).scrollTop();
-            var windowHeight = $(window).height();
-            if (scroll > elemPos - windowHeight + 400){
-                $(this).addClass('scrollin');
-            }
-        });
-    });
+	$('#loopslider').each(function(){
+		var loopsliderWidth = $(this).width();
+		var loopsliderHeight = $(this).height();
+		$(this).children('ul').wrapAll('<div id="loopslider_wrap"></div>');
+
+		var listWidth = $('#loopslider_wrap').children('ul').children('li').width();
+		var listCount = $('#loopslider_wrap').children('ul').children('li').length;
+
+		var loopWidth = (listWidth)*(listCount);
+
+		$('#loopslider_wrap').css({
+			top: '0',
+			left: '0',
+			width: ((loopWidth) * 2),
+			height: (loopsliderHeight),
+			overflow: 'hidden',
+			position: 'absolute'
+		});
+
+		$('#loopslider_wrap ul').css({
+			width: (loopWidth)
+		});
+		loopsliderPosition();
+
+		function loopsliderPosition(){
+			$('#loopslider_wrap').css({left:'0'});
+			$('#loopslider_wrap').stop().animate({left:'-' + (loopWidth) + 'px'},160000,'linear');
+			setTimeout(function(){
+				loopsliderPosition();
+			},160000);
+		};
+
+		$('#loopslider_wrap ul').clone().appendTo('#loopslider_wrap');
+	});
 });
-
 </script>
-
-<script type="text/javascript"><!--スムーススクロール-->
-$(function() {
-    var topBtn = $('#return');
-    topBtn.hide();
-    //スクロールが100に達したらボタン表示
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            topBtn.fadeIn();
-        } else {
-            topBtn.fadeOut();
-        }
-    });
-    //スクロールしてトップ
-    topBtn.click(function () {
-        $('body,html').animate({
-            scrollTop: 0
-        }, 500);
-        return false;
-    });
-});
-
-</script>
+<!--　javascriptの記述はここまで -->
 
 </head>
 
-<!---------下からbody---------------->
-
 <body>
 
-<div id="wrapper">
-
-<!-------トップ----------->
-
-  <div id="bg1">
+<div class="mainlogo">
+<img src="img/logo.png">
 </div>
 
-  <div id="logo">
-    <img src="img/logo.png" alt="logo">
-  </div>
-<!-------トップ----------->
-
-<!---------要素１---------->
-
-  <div id="bg2">
-    <div id="bg2-2">
-
-        <div class="contents">
-
- <section class="fadein">
-          <div class="midashi">
-          <img src="img/midashi-1.png" alt="midashi">
-        </div>
-</section>
-
- <section class="fadein">
-          <div class="naiyou">
-            <p>
-          さらなる充実へ<br>「高級家具としてプランターを」<br>
-        その思いのもとに誕生した「クーデター・レザー」<br>
-      新たに「MM」サイズと「mini」シリーズの計5サイズが加わり<br>
-    さらに充実したラインナップとなりました。</p>
-        </div>
-</section>
-
-        <table class="gazou">
-          <tr>
-            <td>
-              <img src="img/slider-3.jpg" alt="photo">
-            </td>
-            <td>
-              <img src="img/slider-1.jpg" alt="photo">
-            </td>
-            <td>
-              <img src="img/slider-5.jpg" alt="photo">
-            </td>
-          </tr>
-       </table>
-
-           </div>
-
-    </div>
-  </div>
-
-<!---------要素１---------->
-
-<!---------要素2---------->
-  <div id="bg3">
-    <div id="bg3-3">
-
-      <div class="contents">
-
- <section class="fadein">
-        <div class="midashi2">
-        <img src="img/midashi-2-2.png" alt="midashi">
-        </div>
-</section>
-
- <section class="fadein">
-        <div class="naiyou2">
-        <p>厳選した素材を職人の手によってしっかり縫製。<br>
-          脱着可能な防水性のインナーも標準装備しました。<br>
-          クーデターレザープランターは高級感だけでなく<br>
-          メンテナンス性も考えて設計されています。</p>
-        </div>
-</section>
-
-
-        <table class="gazou">
-          <tr>
-            <td>
-              <img src="img/c2-1.png" alt="photo">
-              <p>職人による縫製</p>
-            </td>
-            <td>
-              <img src="img/c2-2.png" alt="photo">
-              <p>厳選したレザー素材</p>
-            </td>
-            <td>
-              <img src="img/c2-3.png" alt="photo">
-              <p>防水性インナー</p>
-            </td>
-          </tr>
-        </table>
-
-          </div>
-        </div>
-      </div>
-<!---------要素2---------->
-
-<!---------要素3---------->
-  <div id="bg4">
-    <div id="bg4-4">
-
-        <div class="contents">
-
- <section class="fadein">
-          <div class="midashi2">
-            <img src="img/midashi-3-3.png" alt="midashi">
-          </div>
-</section>
-
- <section class="fadein">
-          <div class="naiyou">
-            <p>
-            様々な場所へ対応可能なサイズとカラーバリエーションは<br>
-          空間の統一感を高め、理想のイメージへと近づけます。</p>
-        </div>
-</section>
-
-        <div class="color">
-          <img src="img/color.png" alt="color">
-        </div>
-
-        <table class="line-up">
-          <tr>
-            <td>
-              <img src="img/size/LH.png" alt="LH">
-            </td>
-            <td>
-              <img src="img/size/MH.png" alt="MH">
-            </td>
-            <td>
-              <img src="img/size/SH.png" alt="SH">
-            </td>
-          </tr>
-        </table>
-
-        <table class="line-up">
-          <tr>
-            <td>
-              <img src="img/size/MM.png" alt="MM">
-            </td>
-            <td>
-              <img src="img/size/L.png" alt="L">
-            </td>
-            <td>
-              <img src="img/size/M.png" alt="M">
-            </td>
-          </tr>
-        </table>
-
-        <div class="midashi2">
-          <img src="img/midashi-4.png" alt="midashi">
-        </div>
-
-        <table class="mini">
-          <tr>
-            <td>
-              <img src="img/size/mini160.png" alt="mini160">
-            </td>
-            <td>
-              <img src="img/size/mini120.png" alt="mini120">
-            </td>
-          </tr>
-        </table>
-        <table class="mini">
-          <tr>
-            <td>
-              <img src="img/size/mini100.png" alt="mini100">
-            </td>
-            <td>
-              <img src="img/size/mini80.png" alt="mini80">
-            </td>
-          </tr>
-        </table>
-
-        <div class="midashi3">
-             <h1><img src="img/rei.png" alt="設置例"></h1>
-           </div>
-
-        <div class="thumb">
-        <!--メイン-->
-        	<div class="flexslider">
-            <ul class="slides">
-            	<li data-thumb="img/nail-1_s.jpg"><img src="img/nail-1.jpg" alt="赤色卓上プランター"></li>
-                <li data-thumb="img/nail-2_s.jpg"><img src="img/nail-2.jpg" alt="ショップインテリア"></li>
-                <li data-thumb="img/nail-3_s.jpg"><img src="img/nail-3.jpg" alt="無機質な空間に癒し"></li>
-                <li data-thumb="img/nail-4_s.jpg"><img src="img/nail-4.jpg" alt="車と鉢"></li>
-                <li data-thumb="img/nail-5_s.jpg"><img src="img/nail-5.jpg" alt="リラックス"></li>
-                <li data-thumb="img/nail-6_s.jpg"><img src="img/nail-6.jpg" alt="シックなインテリア空間"></li>
-                <li data-thumb="img/nail-7_s.jpg"><img src="img/nail-7.jpg" alt="存在感"></li>
-                <li data-thumb="img/nail-8_s.jpg"><img src="img/nail-8.jpg" alt="白で統一感"></li>
-            </ul>
-            </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-<!---------要素3---------->
-
-
-<!--------メールフォーム---------->
-<div id="bg5">
-<div id="bg5-5">
-
-  <div class="midashi4">
-       <h1><img src="img/otoiawase.png" alt="お問い合わせ"></h1>
-     </div>
-
-  <div id="form">
-
-    <form method="post" action="mail.php">
-
-  <table class="toiawase">
-        <tr>
-          <th><span>お名前</span></th>
-          <td><input type="text" name="お名前" /></td>
-        </tr>
-        <tr>
-          <th><span>お電話番号</span></th>
-          <td><input type="text" name="電話番号" /></td>
-        </tr>
-        <tr>
-          <th><span>メールアドレス</span></th>
-          <td><input type="text" name="Email" /></td>
-        </tr>
-        <tr>
-          <th><span>お問い合わせ内容</span></th>
-          <td><textarea name="お問い合わせ内容" rows="10"></textarea></td>
-        </tr>
-      </table>
-  <div class="button">
-        <input type="submit" value="　 確認 　" />　<input type="reset" value="リセット" />
-      </div>
-    </form>
-<!--------メールフォーム---------->
-
-<!------------フッター----------------->
-
-<div id="anchor_link">
-<a href="#top"><img src="img/top.png" alt="TOPへ戻る"></a>
-</div>
-    <div id="footer">
-      <p>Copyright c COUP D ' ETAT PLANTER All Rights Reserved.</p>
-    </div>
-
-
-  </div>
-</div>
-</div>
-<!------------フッター----------------->
-
-
-
-
-</div><!------wrapper end------->
-
-
+<div id="container">
+<div id="loopslider">
+	<ul>
+		<li><a href="#"><img src="img/plan_main.jpg" alt="クーデター" /></a></li>
+		<li><a href="#"><img src="img/plan_main.jpg" alt="クーデター" /></a></li>
+		<li><a href="#"><img src="img/plan_main.jpg" alt="クーデター" /></a></li>
+	</ul>
+</div><!--/#loopslider-->
+</div><!--/#container-->
 
 </body>
 </html>
