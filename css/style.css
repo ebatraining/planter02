@@ -257,6 +257,22 @@ table.line-up img{
   width: 100%;
   margin: 0 auto;
 }
+table.line-up p, table.mini p{
+  text-align: right;
+  width:80%;
+  font-size: 150%;
+  line-height: 1.3em;
+  margin: 7% 25% 0 0;
+}
+
+table .price{
+  font-size: 155%;
+  width:80%;
+  line-height: 1.3em;
+}
+
+
+
 table.mini{
   width: 70%;
   height: auto;
@@ -271,6 +287,11 @@ table.mini img{
   height: auto;
   margin: 0 auto;
 }
+
+
+
+
+
 
 .midashi3{
   width: 90%;
@@ -288,6 +309,18 @@ table.mini img{
 	margin: 0px auto;
 	display: block;
 }
+
+
+.banner img{
+  width: 80%;
+	height: auto;
+	margin: 10% auto;
+	display: block;
+}
+
+
+
+
 
 /*==========メールフォーム===========*/
 
@@ -317,7 +350,7 @@ table.mini img{
 .midashi4 img{
   width: 35%;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 auto 20px auto;
 }
 #form {
 	width: 90%;
@@ -354,11 +387,13 @@ table.toiawase input{
 	border: solid 1px #ffffff;
   background-color: #ffffff;
 	font-size: 100%;
+  margin-bottom: 30px;
 }
 table.toiawase textarea{
-	width: 95%;
+	width: 94.6%;
 	font-size: 100%;
   background-color: #ffffff;
+  margin-bottom: 10px;
 }
 .button{
 	width: 100%;
@@ -413,5 +448,3 @@ table.toiawase textarea{
     opacity : 1;
     transform : translate(0, 0);
     }
-
-
